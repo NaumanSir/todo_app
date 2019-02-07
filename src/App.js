@@ -1,25 +1,32 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import Todos from './components/Todos';
 import './App.css';
 
 class App extends Component {
+  state = {
+    todos: [
+      {
+        id: 1,
+        title: 'create React App',
+        completed: false
+      },
+      {
+        id: 2,
+        title: 'take out trash',
+        completed: false
+      },
+      {
+        id: 3,
+        title: 'call your brother',
+        completed: false
+      },
+    ]
+  }
   render() {
+    // console.log(this.state.todos)
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Hello World
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <Todos todos={this.state.todos} />
       </div>
     );
   }
