@@ -13,7 +13,7 @@ class App extends Component {
       {
         id: 2,
         title: 'take out trash',
-        completed: false
+        completed: true
       },
       {
         id: 3,
@@ -22,11 +22,16 @@ class App extends Component {
       },
     ]
   }
+
+markComplete = (id) => {
+  console.log(id)
+}
+
   render() {
     // console.log(this.state.todos)
     return (
       <div className="App">
-        <Todos todos={this.state.todos} />
+        <Todos todos={this.state.todos} markComplete={this.markComplete}/>
       </div>
     );
   }
