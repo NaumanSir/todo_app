@@ -3,3 +3,21 @@
   padding: 0px;
   font-family: 'Trebuchet MS';
 }
+
+.container {
+    padding: 0 1rem;
+}
+
+.btn {
+    display: inline-block;
+    border: none;
+    background: blue;
+    color: white;
+    font-weight: bolder;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: lightgray;
+}
